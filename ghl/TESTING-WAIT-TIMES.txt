@@ -1,0 +1,81 @@
+WAIT TIMES — TESTING vs ORIGINAL
+=================================
+
+Change these before testing, restore after.
+
+NOTE: "Wait until event start time" steps use MINUTES BEFORE the appointment.
+      For testing, book an appointment 5 minutes from now so these fire quickly.
+
+=================================
+WF-1: New Lead Intake
+=================================
+Step 5 | TESTING: 1 minute     | ORIGINAL: 5 minutes
+
+=================================
+WF-2: No Response Follow Up
+=================================
+Step 2 | TESTING: 1 minute     | ORIGINAL: 3 days
+Step 5 | TESTING: 1 minute     | ORIGINAL: 4 days
+
+=================================
+WF-4: Patient Visited
+=================================
+Step 5 | TESTING: 1 minute     | ORIGINAL: 24 hours
+
+=================================
+WF-5: 24hr Reminder
+=================================
+Step 2 | TESTING: 3 min before | ORIGINAL: 24 hours before event
+Step 5 | TESTING: 1 min before | ORIGINAL: 1 hour before event
+
+      HOW TO TEST WF-5:
+      Book an appointment 5 minutes from now.
+      - The 3-min-before reminder fires at T-3 min
+      - The 1-min-before reminder fires at T-1 min
+      After testing, change back to 24hr and 1hr.
+
+=================================
+WF-8: No Show Follow Up
+=================================
+Step 6 | TESTING: 1 minute     | ORIGINAL: 1 hour
+Step 8 | TESTING: 1 minute     | ORIGINAL: 4 hours
+
+=================================
+WF-10: Request Review
+=================================
+Step 2 | TESTING: 1 minute     | ORIGINAL: 2 hours
+Step 5 | TESTING: 1 minute     | ORIGINAL: 24 hours
+Step 7 | TESTING: 1 minute     | ORIGINAL: 2 hours
+
+=================================
+WF-11: Re-Engagement
+=================================
+Step 2 | TESTING: 1 minute     | ORIGINAL: 90 days
+Step 5 | TESTING: 1 minute     | ORIGINAL: 3 days
+
+
+=================================
+TOTAL: 13 wait steps to change
+=================================
+
+QUICK CHECKLIST — AFTER TESTING RESTORE THESE:
+
+[ ] WF-1  Step 5  → 5 minutes
+[ ] WF-2  Step 2  → 3 days
+[ ] WF-2  Step 5  → 4 days
+[ ] WF-4  Step 5  → 24 hours
+[ ] WF-5  Step 2  → 24 hours before event
+[ ] WF-5  Step 5  → 1 hour before event
+[ ] WF-8  Step 6  → 1 hour
+[ ] WF-8  Step 8  → 4 hours
+[ ] WF-10 Step 2  → 2 hours
+[ ] WF-10 Step 5  → 24 hours
+[ ] WF-10 Step 7  → 2 hours
+[ ] WF-11 Step 2  → 90 days
+[ ] WF-11 Step 5  → 3 days
+
+WORKFLOWS WITH NO WAIT STEPS (no changes needed):
+- WF-3  (Appointment Booked)
+- WF-6  (Appointment Confirmed)
+- WF-7  (Appointment Completed)
+- WF-9  (Appointment Cancelled)
