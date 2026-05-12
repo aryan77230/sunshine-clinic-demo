@@ -58,7 +58,7 @@ vercel --prod
 
 Production aliases for any deploy:
 - [demo-clinic-aryan-test.vercel.app](https://demo-clinic-aryan-test.vercel.app) (canonical)
-- sunrise-family-clinic.vercel.app (auto-domain — slated for rename)
+- [sunshine-clinic-demo.vercel.app](https://sunshine-clinic-demo.vercel.app) (auto-domain)
 
 ## License
 
